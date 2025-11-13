@@ -297,7 +297,7 @@ do
 
 		Background.Name = "Background"
 		Background.Parent = RealBackground
-		Background.BackgroundColor3 = Color3.fromRGB(29,28,38)
+		Background.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
 		Background.BorderColor3 = Color3.fromRGB(0,0,0)
 		Background.BorderSizePixel = 0
 		Background.Size = UDim2.new(1, 0,1, 0)
@@ -1134,18 +1134,6 @@ function Library:CreateWindow(p)
 	Close_1.LayoutOrder = 3
 	Close_1.Size = UDim2.new(0, 16,0, 16)
 	Close_1.Image = "rbxassetid://15082305656"
-
-	ChSize_1.Name = "Size"
-	ChSize_1.Parent = Ct_1
-	ChSize_1.Active = true
-	ChSize_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
-	ChSize_1.BackgroundTransparency = 1
-	ChSize_1.BorderColor3 = Color3.fromRGB(0,0,0)
-	ChSize_1.BorderSizePixel = 0
-	ChSize_1.LayoutOrder = 1
-	ChSize_1.Size = UDim2.new(0, 16,0, 16)
-	ChSize_1.Image = "rbxassetid://15082210525"
-	ChSize_1.ImageTransparency = 0.5
 
 	DropdownValue_1.Name = "DropdownValue"
 	DropdownValue_1.Parent = Ct_1
@@ -4636,7 +4624,7 @@ function Library:CreateWindow(p)
 			BackgroundCloseUI_1.Name = "BackgroundCloseUI"
 			BackgroundCloseUI_1.Parent = CloseUIShadow
 			BackgroundCloseUI_1.AnchorPoint = Vector2.new(0.5, 0.5)
-			BackgroundCloseUI_1.BackgroundColor3 = Color3.fromRGB(29,28,38)
+			BackgroundCloseUI_1.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
 			BackgroundCloseUI_1.BorderColor3 = Color3.fromRGB(0,0,0)
 			BackgroundCloseUI_1.BorderSizePixel = 0
 			BackgroundCloseUI_1.Position = UDim2.new(0.5, 0,0.5, 0)
