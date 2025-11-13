@@ -2,7 +2,7 @@ Library = {}
 SaveTheme = {}
 
 local themes = {
-	index = {'Dark', 'White'},
+	index = {'Dark','White'},
 
 	Dark = {
 		['Shadow'] = Color3.fromRGB(15, 15, 15),
@@ -140,7 +140,7 @@ local themes = {
 				}
 			}
 		}
-	}
+	},
 }
 
 
