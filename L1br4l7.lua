@@ -1095,6 +1095,17 @@ function Library:CreateWindow(p)
 	Ct_1.BorderSizePixel = 0
 	Ct_1.Size = UDim2.new(1, 0,1, 0)
 
+	Close_1.Name = "Close"
+	Close_1.Parent = Ct_1
+	Close_1.Active = true
+	Close_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
+	Close_1.BackgroundTransparency = 1
+	Close_1.BorderColor3 = Color3.fromRGB(0,0,0)
+	Close_1.BorderSizePixel = 0
+	Close_1.LayoutOrder = 3
+	Close_1.Size = UDim2.new(0, 16,0, 16)
+	Close_1.Image = "rbxassetid://15082305656"
+
 	DropdownValue_1.Name = "DropdownValue"
 	DropdownValue_1.Parent = Ct_1
 	DropdownValue_1.AnchorPoint = Vector2.new(1, 0.5)
@@ -4408,7 +4419,7 @@ function Library:CreateWindow(p)
 		['Text & Icon'] = Color3.fromRGB(230, 230, 230),
 		['Function'] = {
 			['Toggle'] = {
-				['Background'] = Color3.fromRGB(20, 20, 20),
+				['Background'] = Color3.fromRGB(56, 56, 56),
 				['True'] = {
 					['Toggle Background'] = Color3.fromRGB(40, 40, 40),
 					['Toggle Value'] = Color3.fromRGB(0, 80, 252),
@@ -4471,7 +4482,7 @@ function Library:CreateWindow(p)
 		end
 
 
-		CallTheme("Dark");
+		CallTheme("Dark");CallTheme("Dark");CallTheme("Dark");CallTheme("Dark");CallTheme("Dark");CallTheme("Dark");
 
 
         Library:setTheme({
@@ -4482,7 +4493,7 @@ function Library:CreateWindow(p)
 		['Text & Icon'] = Color3.fromRGB(230, 230, 230),
 		['Function'] = {
 			['Toggle'] = {
-				['Background'] = Color3.fromRGB(56, 56, 56),
+				['Background'] = Color3.fromRGB(25, 25, 25),
 				['True'] = {
 					['Toggle Background'] = Color3.fromRGB(40, 40, 40),
 					['Toggle Value'] = Color3.fromRGB(0, 80, 252),
@@ -4543,8 +4554,13 @@ function Library:CreateWindow(p)
 				}
 			})
 
+		Close_1.MouseButton1Click:Connect(function()
+						ScreenGui:Destroy()
+
+		end)
 
 		do
+			local CloseUI = p.CloseUIButton
 			local CloseUIShadow = Instance.new("ImageLabel")
 			local UIPaddingCloseUI_1 = Instance.new("UIPadding")
 			local BackgroundCloseUI_1 = Instance.new("Frame")
