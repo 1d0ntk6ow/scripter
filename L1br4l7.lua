@@ -297,7 +297,7 @@ do
 
 		Background.Name = "Background"
 		Background.Parent = RealBackground
-		Background.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+		Background.BackgroundColor3 = Color3.fromRGB(29,28,38)
 		Background.BorderColor3 = Color3.fromRGB(0,0,0)
 		Background.BorderSizePixel = 0
 		Background.Size = UDim2.new(1, 0,1, 0)
@@ -1103,6 +1103,20 @@ function Library:CreateWindow(p)
 	UIPadding_11.PaddingRight = UDim.new(0,10)
 	UIPadding_11.PaddingTop = UDim.new(0,5)
 
+	Minisize_1.Name = "Minisize"
+	Minisize_1.Parent = Ct_1
+	Minisize_1.Active = true
+	Minisize_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
+	Minisize_1.BackgroundTransparency = 1
+	Minisize_1.BorderColor3 = Color3.fromRGB(0,0,0)
+	Minisize_1.BorderSizePixel = 0
+	Minisize_1.LayoutOrder = 2
+	Minisize_1.Size = UDim2.new(0, 16,0, 16)
+	Minisize_1.Image = "rbxassetid://13857987062"
+	Minisize_1.ImageTransparency = 0.5
+
+	addToTheme('Text & Icon', Minisize_1)
+
 	UIListLayout_6.Parent = Ct_1
 	UIListLayout_6.Padding = UDim.new(0,10)
 	UIListLayout_6.FillDirection = Enum.FillDirection.Horizontal
@@ -1120,6 +1134,18 @@ function Library:CreateWindow(p)
 	Close_1.LayoutOrder = 3
 	Close_1.Size = UDim2.new(0, 16,0, 16)
 	Close_1.Image = "rbxassetid://15082305656"
+
+	ChSize_1.Name = "Size"
+	ChSize_1.Parent = Ct_1
+	ChSize_1.Active = true
+	ChSize_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
+	ChSize_1.BackgroundTransparency = 1
+	ChSize_1.BorderColor3 = Color3.fromRGB(0,0,0)
+	ChSize_1.BorderSizePixel = 0
+	ChSize_1.LayoutOrder = 1
+	ChSize_1.Size = UDim2.new(0, 16,0, 16)
+	ChSize_1.Image = "rbxassetid://15082210525"
+	ChSize_1.ImageTransparency = 0.5
 
 	DropdownValue_1.Name = "DropdownValue"
 	DropdownValue_1.Parent = Ct_1
@@ -1422,7 +1448,7 @@ function Library:CreateWindow(p)
 		InPage_1.Name = "InPage"
 		InPage_1.Parent = Page_1
 		InPage_1.AnchorPoint = Vector2.new(0.5 ,0.5)
-		InPage_1.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+		InPage_1.BackgroundColor3 = Color3.fromRGB(24,24,31)
 		InPage_1.BorderColor3 = Color3.fromRGB(0,0,0)
 		InPage_1.BorderSizePixel = 0
 		InPage_1.Size = UDim2.new(1, 0,1, 0)
@@ -4502,74 +4528,7 @@ function Library:CreateWindow(p)
 		CallTheme("Dark");CallTheme("Dark");CallTheme("Dark");CallTheme("Dark");CallTheme("Dark");CallTheme("Dark");
 
 
-        Library:setTheme({
-        ['Shadow'] = Color3.fromRGB(15, 15, 15),
-		['Background'] = Color3.fromRGB(20, 20, 20),
-		['Page'] = Color3.fromRGB(18, 18, 18),
-		['Main'] = Color3.fromRGB(0, 80, 252),
-		['Text & Icon'] = Color3.fromRGB(230, 230, 230),
-		['Function'] = {
-			['Toggle'] = {
-				['Background'] = Color3.fromRGB(25, 25, 25),
-				['True'] = {
-					['Toggle Background'] = Color3.fromRGB(40, 40, 40),
-					['Toggle Value'] = Color3.fromRGB(0, 80, 252),
-				},
-				['False'] = {
-					['Toggle Background'] = Color3.fromRGB(30, 30, 30),
-					['Toggle Value'] = Color3.fromRGB(40, 40, 40),
-				}
-			},
-			['Label'] = { ['Background'] = Color3.fromRGB(25, 25, 25) },
-			['Dropdown'] = {
-				['Background'] = Color3.fromRGB(25, 25, 25),
-				['Value Background'] = Color3.fromRGB(20, 20, 20),
-				['Value Stroke'] = Color3.fromRGB(230, 230, 230),
-				['Dropdown Select'] = {
-					['Background'] = Color3.fromRGB(20, 20, 20),
-					['Search'] = Color3.fromRGB(30, 30, 30),
-					['Item Background'] = Color3.fromRGB(30, 30, 30),
-				}
-			},
-			['Slider'] = {
-				['Background'] = Color3.fromRGB(25, 25, 25),
-				['Value Background'] = Color3.fromRGB(20, 20, 20),
-				['Value Stroke'] = Color3.fromRGB(230, 230, 230),
-				['Slider Bar'] = Color3.fromRGB(40, 40, 40),
-				['Slider Bar Value'] = Color3.fromRGB(0, 80, 252),
-				['Circle Value'] = Color3.fromRGB(255, 255, 255)
-			},
-			['Button'] = {
-				['Background'] = Color3.fromRGB(25, 25, 25),
-				['Click'] = Color3.fromRGB(230, 230, 230)
-			},
-			['Textbox'] = {
-				['Background'] = Color3.fromRGB(25, 25, 25),
-				['Value Background'] = Color3.fromRGB(20, 20, 20),
-				['Value Stroke'] = Color3.fromRGB(230, 230, 230),
-			},
-			['Keybind'] = {
-				['Background'] = Color3.fromRGB(25, 25, 25),
-				['Value Background'] = Color3.fromRGB(20, 20, 20),
-				['Value Stroke'] = Color3.fromRGB(230, 230, 230),
-				['True'] = {
-					['Toggle Background'] = Color3.fromRGB(40, 40, 40),
-					['Toggle Value'] = Color3.fromRGB(0, 80, 252),
-				},
-				['False'] = {
-					['Toggle Background'] = Color3.fromRGB(30, 30, 30),
-					['Toggle Value'] = Color3.fromRGB(40, 40, 40),
-				}
-			},
-			['Color Picker'] = {
-				['Background'] = Color3.fromRGB(25, 25, 25),
-				['Color Select'] = {
-					['Background'] = Color3.fromRGB(20, 20, 20),
-					['UIStroke'] = Color3.fromRGB(230, 230, 230),
-						}
-					}
-				}
-			})
+        
 
 		Close_1.MouseButton1Click:Connect(function()
 						ScreenGui:Destroy()
@@ -4610,7 +4569,7 @@ function Library:CreateWindow(p)
 			BackgroundCloseUI_1.Name = "BackgroundCloseUI"
 			BackgroundCloseUI_1.Parent = CloseUIShadow
 			BackgroundCloseUI_1.AnchorPoint = Vector2.new(0.5, 0.5)
-			BackgroundCloseUI_1.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+			BackgroundCloseUI_1.BackgroundColor3 = Color3.fromRGB(29,28,38)
 			BackgroundCloseUI_1.BorderColor3 = Color3.fromRGB(0,0,0)
 			BackgroundCloseUI_1.BorderSizePixel = 0
 			BackgroundCloseUI_1.Position = UDim2.new(0.5, 0,0.5, 0)
