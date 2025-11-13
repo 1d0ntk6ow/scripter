@@ -1058,7 +1058,6 @@ function Library:CreateWindow(p)
 	local Ct_1 = Instance.new("Frame")
 	local UIPadding_11 = Instance.new("UIPadding")
 	local UIListLayout_6 = Instance.new("UIListLayout")
-	local Close_1 = Instance.new("ImageButton")
 	local DropdownValue_1 = Instance.new("Frame")
 	local Td_1 = Instance.new("Frame")
 	local UIPadding_13 = Instance.new("UIPadding")
@@ -1095,17 +1094,6 @@ function Library:CreateWindow(p)
 	Ct_1.BorderColor3 = Color3.fromRGB(0,0,0)
 	Ct_1.BorderSizePixel = 0
 	Ct_1.Size = UDim2.new(1, 0,1, 0)
-
-	Close_1.Name = "Close"
-	Close_1.Parent = Ct_1
-	Close_1.Active = true
-	Close_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
-	Close_1.BackgroundTransparency = 1
-	Close_1.BorderColor3 = Color3.fromRGB(0,0,0)
-	Close_1.BorderSizePixel = 0
-	Close_1.LayoutOrder = 3
-	Close_1.Size = UDim2.new(0, 16,0, 16)
-	Close_1.Image = "rbxassetid://15082305656"
 
 	DropdownValue_1.Name = "DropdownValue"
 	DropdownValue_1.Parent = Ct_1
