@@ -8,14 +8,14 @@ local themes = {
 		['Shadow'] = Color3.fromRGB(15, 15, 15),
 		['Background'] = Color3.fromRGB(20, 20, 20),
 		['Page'] = Color3.fromRGB(18, 18, 18),
-		['Main'] = Color3.fromRGB(0, 255, 132),
+		['Main'] = Color3.fromRGB(0, 80, 252),
 		['Text & Icon'] = Color3.fromRGB(230, 230, 230),
 		['Function'] = {
 			['Toggle'] = {
 				['Background'] = Color3.fromRGB(25, 25, 25),
 				['True'] = {
 					['Toggle Background'] = Color3.fromRGB(40, 40, 40),
-					['Toggle Value'] = Color3.fromRGB(0, 255, 132),
+					['Toggle Value'] = Color3.fromRGB(0, 80, 252),
 				},
 				['False'] = {
 					['Toggle Background'] = Color3.fromRGB(30, 30, 30),
@@ -38,7 +38,7 @@ local themes = {
 				['Value Background'] = Color3.fromRGB(20, 20, 20),
 				['Value Stroke'] = Color3.fromRGB(230, 230, 230),
 				['Slider Bar'] = Color3.fromRGB(40, 40, 40),
-				['Slider Bar Value'] = Color3.fromRGB(0, 255, 132),
+				['Slider Bar Value'] = Color3.fromRGB(0, 80, 252),
 				['Circle Value'] = Color3.fromRGB(255, 255, 255)
 			},
 			['Button'] = {
@@ -56,7 +56,7 @@ local themes = {
 				['Value Stroke'] = Color3.fromRGB(230, 230, 230),
 				['True'] = {
 					['Toggle Background'] = Color3.fromRGB(40, 40, 40),
-					['Toggle Value'] = Color3.fromRGB(0, 255, 132),
+					['Toggle Value'] = Color3.fromRGB(0, 80, 252),
 				},
 				['False'] = {
 					['Toggle Background'] = Color3.fromRGB(30, 30, 30),
@@ -653,7 +653,7 @@ do
 		ScrollingFrame_1.ElasticBehavior = Enum.ElasticBehavior.WhenScrollable
 		ScrollingFrame_1.HorizontalScrollBarInset = Enum.ScrollBarInset.None
 		ScrollingFrame_1.MidImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
-		ScrollingFrame_1.ScrollBarImageColor3 = Color3.fromRGB(0, 255, 132)
+		ScrollingFrame_1.ScrollBarImageColor3 = Color3.fromRGB(0, 80, 252)
 		ScrollingFrame_1.ScrollBarImageTransparency = 0
 		ScrollingFrame_1.ScrollBarThickness = 2
 		ScrollingFrame_1.ScrollingDirection = Enum.ScrollingDirection.XY
@@ -4380,11 +4380,11 @@ function Library:CreateWindow(p)
 				tw({v = Shadow_1, t = 0.05, s = Enum.EasingStyle.Exponential, d = "Out", g = {Size = nZ}}):Play()
 				tw({v = SizeFrame, t = 0.15, s = Enum.EasingStyle.Linear, d = "Out", g = {BackgroundTransparency = 0.6}}):Play()
 				tw({v = ImageLabel_1, t = 0.15, s = Enum.EasingStyle.Linear, d = "Out", g = {ImageTransparency = 0}}):Play()
-				ImageLabel_1.Image = 'rbxassetid://13857987062'	
+				ImageLabel_1.Image = 'rbxassetid://14906268026'	
 			elseif isZ and R and (i.UserInputType == Enum.UserInputType.MouseMovement or i.UserInputType == Enum.UserInputType.Touch) then
 				tw({v = SizeFrame, t = 0.15, s = Enum.EasingStyle.Linear, d = "Out", g = {BackgroundTransparency = 0.6}}):Play()
 				tw({v = ImageLabel_1, t = 0.15, s = Enum.EasingStyle.Linear, d = "Out", g = {ImageTransparency = 0}}):Play()
-				ImageLabel_1.Image = 'rbxassetid://14906268026'
+				ImageLabel_1.Image = 'rbxassetid://13857987062'
 			end
 		end)
 
@@ -4525,14 +4525,14 @@ function Library:CreateWindow(p)
 				['Shadow'] = Color3.fromRGB(15, 15, 15),
 				['Background'] = Color3.fromRGB(20, 20, 20),
 				['Page'] = Color3.fromRGB(18, 18, 18),
-				['Main'] = Color3.fromRGB(0, 255, 132),
+				['Main'] = Color3.fromRGB(0, 80, 252),
 				['Text & Icon'] = Color3.fromRGB(230, 230, 230),
 				['Function'] = {
 					['Toggle'] = {
 						['Background'] = Color3.fromRGB(25, 25, 25),
 						['True'] = {
 							['Toggle Background'] = Color3.fromRGB(40, 40, 40),
-							['Toggle Value'] = Color3.fromRGB(0, 255, 132),
+							['Toggle Value'] = Color3.fromRGB(0, 80, 252),
 						},
 						['False'] = {
 							['Toggle Background'] = Color3.fromRGB(30, 30, 30),
@@ -4557,7 +4557,7 @@ function Library:CreateWindow(p)
 						['Value Background'] = Color3.fromRGB(20, 20, 20),
 						['Value Stroke'] = Color3.fromRGB(230, 230, 230),
 						['Slider Bar'] = Color3.fromRGB(40, 40, 40),
-						['Slider Bar Value'] = Color3.fromRGB(0, 255, 132),
+						['Slider Bar Value'] = Color3.fromRGB(0, 80, 252),
 						['Circle Value'] = Color3.fromRGB(255, 255, 255)
 					},
 					['Code'] = {
@@ -4581,7 +4581,7 @@ function Library:CreateWindow(p)
 						['Value Stroke'] = Color3.fromRGB(230, 230, 230),
 						['True'] = {
 							['Toggle Background'] = Color3.fromRGB(40, 40, 40),
-							['Toggle Value'] = Color3.fromRGB(0, 255, 132),
+							['Toggle Value'] = Color3.fromRGB(0, 80, 252),
 						},
 						['False'] = {
 							['Toggle Background'] = Color3.fromRGB(30, 30, 30),
@@ -4603,20 +4603,8 @@ function Library:CreateWindow(p)
 		CallTheme("Dark");CallTheme("Dark");CallTheme("Dark");CallTheme("Dark");CallTheme("Dark");CallTheme("Dark");
 
 		Close_1.MouseButton1Click:Connect(function()
-			Tabs:Dialog({
-				Title = "Do you want to <font color='#FF0000'>close</font> the ui?",
-				Button1 = {
-					Title = 'Confirm',
-					Color = Color3.fromRGB(0, 188, 0),
-					Callback = function()
 						ScreenGui:Destroy()
-					end,
-				},
-				Button2 = {
-					Title = 'Cancel',
-					Color = Color3.fromRGB(226, 39, 6),
-				}
-			})
+
 		end)
 
 		do
