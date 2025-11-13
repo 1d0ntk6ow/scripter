@@ -4408,7 +4408,7 @@ function Library:CreateWindow(p)
 		['Text & Icon'] = Color3.fromRGB(230, 230, 230),
 		['Function'] = {
 			['Toggle'] = {
-				['Background'] = Color3.fromRGB(56, 56, 56),
+				['Background'] = Color3.fromRGB(20, 20, 20),
 				['True'] = {
 					['Toggle Background'] = Color3.fromRGB(40, 40, 40),
 					['Toggle Value'] = Color3.fromRGB(0, 80, 252),
@@ -4471,7 +4471,7 @@ function Library:CreateWindow(p)
 		end
 
 
-		CallTheme("Dark");CallTheme("Dark");CallTheme("Dark");CallTheme("Dark");CallTheme("Dark");CallTheme("Dark");
+		CallTheme("Dark");
 
 
         Library:setTheme({
@@ -4543,10 +4543,6 @@ function Library:CreateWindow(p)
 				}
 			})
 
-		Close_1.MouseButton1Click:Connect(function()
-						ScreenGui:Destroy()
-
-		end)
 
 		do
 			local CloseUIShadow = Instance.new("ImageLabel")
