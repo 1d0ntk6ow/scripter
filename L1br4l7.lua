@@ -1088,27 +1088,6 @@ function Library:CreateWindow(p)
 
 	addToTheme('Page', Frame_5)
 
-	Ct_1.Name = "Ct"
-	Ct_1.Parent = Topbar_1
-	Ct_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
-	Ct_1.BackgroundTransparency = 1
-	Ct_1.BorderColor3 = Color3.fromRGB(0,0,0)
-	Ct_1.BorderSizePixel = 0
-	Ct_1.Size = UDim2.new(1, 0,1, 0)
-
-	UIPadding_11.Parent = Ct_1
-	UIPadding_11.PaddingBottom = UDim.new(0,5)
-	UIPadding_11.PaddingLeft = UDim.new(0,10)
-	UIPadding_11.PaddingRight = UDim.new(0,10)
-	UIPadding_11.PaddingTop = UDim.new(0,5)
-
-	UIListLayout_6.Parent = Ct_1
-	UIListLayout_6.Padding = UDim.new(0,10)
-	UIListLayout_6.FillDirection = Enum.FillDirection.Horizontal
-	UIListLayout_6.HorizontalAlignment = Enum.HorizontalAlignment.Right
-	UIListLayout_6.SortOrder = Enum.SortOrder.LayoutOrder
-	UIListLayout_6.VerticalAlignment = Enum.VerticalAlignment.Center
-
 	Close_1.Name = "Close"
 	Close_1.Parent = Ct_1
 	Close_1.Active = true
@@ -4335,8 +4314,6 @@ function Library:CreateWindow(p)
 				firsttime = true
 			end
 		end
-
-		ChSize_1.MouseButton1Click:Connect(closeui)
 
 		U.InputBegan:Connect(function(i)
 			if i.KeyCode == Keybind then
