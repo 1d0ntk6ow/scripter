@@ -73,8 +73,7 @@ local themes = {
 		}
 	},
 
-	-- 💡 Theme ใหม่: Dark White (พื้นหลังขาว เทาอ่อน ตัวอักษรดำ)
-	['Dark White'] = {
+	White = {
 		['Shadow'] = Color3.fromRGB(200, 200, 200),
 		['Background'] = Color3.fromRGB(240, 240, 240),
 		['Page'] = Color3.fromRGB(250, 250, 250),
