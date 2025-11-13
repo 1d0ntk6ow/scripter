@@ -1088,6 +1088,14 @@ function Library:CreateWindow(p)
 
 	addToTheme('Page', Frame_5)
 
+	Ct_1.Name = "Ct"
+	Ct_1.Parent = Topbar_1
+	Ct_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
+	Ct_1.BackgroundTransparency = 1
+	Ct_1.BorderColor3 = Color3.fromRGB(0,0,0)
+	Ct_1.BorderSizePixel = 0
+	Ct_1.Size = UDim2.new(1, 0,1, 0)
+
 	Close_1.Name = "Close"
 	Close_1.Parent = Ct_1
 	Close_1.Active = true
