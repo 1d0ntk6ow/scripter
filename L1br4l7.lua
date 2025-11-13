@@ -1057,7 +1057,6 @@ function Library:CreateWindow(p)
 	local Frame_5 = Instance.new("Frame")
 	local Ct_1 = Instance.new("Frame")
 	local UIPadding_11 = Instance.new("UIPadding")
-	local Minisize_1 = Instance.new("ImageButton")
 	local UIListLayout_6 = Instance.new("UIListLayout")
 	local Close_1 = Instance.new("ImageButton")
 	local DropdownValue_1 = Instance.new("Frame")
@@ -1102,8 +1101,6 @@ function Library:CreateWindow(p)
 	UIPadding_11.PaddingLeft = UDim.new(0,10)
 	UIPadding_11.PaddingRight = UDim.new(0,10)
 	UIPadding_11.PaddingTop = UDim.new(0,5)
-
-	addToTheme('Text & Icon', Minisize_1)
 
 	UIListLayout_6.Parent = Ct_1
 	UIListLayout_6.Padding = UDim.new(0,10)
