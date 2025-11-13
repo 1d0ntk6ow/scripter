@@ -4482,7 +4482,7 @@ function Library:CreateWindow(p)
 		['Text & Icon'] = Color3.fromRGB(230, 230, 230),
 		['Function'] = {
 			['Toggle'] = {
-				['Background'] = Color3.fromRGB(25, 25, 25),
+				['Background'] = Color3.fromRGB(56, 56, 56),
 				['True'] = {
 					['Toggle Background'] = Color3.fromRGB(40, 40, 40),
 					['Toggle Value'] = Color3.fromRGB(0, 80, 252),
@@ -4549,7 +4549,6 @@ function Library:CreateWindow(p)
 		end)
 
 		do
-			local CloseUI = p.CloseUIButton
 			local CloseUIShadow = Instance.new("ImageLabel")
 			local UIPaddingCloseUI_1 = Instance.new("UIPadding")
 			local BackgroundCloseUI_1 = Instance.new("Frame")
