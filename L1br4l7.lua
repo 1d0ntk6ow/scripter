@@ -603,7 +603,7 @@ do
 		TextBox_1.Size = UDim2.new(1, 0,1, 0)
 		TextBox_1.Font = Enum.Font.Gotham
 		TextBox_1.PlaceholderColor3 = Color3.fromRGB(178,178,178)
-		TextBox_1.PlaceholderText = "Search . . ."
+		TextBox_1.PlaceholderText = "Themes"
 		TextBox_1.Text = ""
 		TextBox_1.TextColor3 = Color3.fromRGB(255,255,255)
 		TextBox_1.TextSize = 11
@@ -4284,73 +4284,6 @@ function Library:CreateWindow(p)
 	end
 
 	do
-		local Size_1 = Instance.new("TextButton")
-
-		Size_1.Name = "Size"
-		Size_1.Parent = Background_1
-		Size_1.Active = true
-		Size_1.AnchorPoint = Vector2.new(1, 1)
-		Size_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
-		Size_1.BackgroundTransparency = 1
-		Size_1.BorderColor3 = Color3.fromRGB(0,0,0)
-		Size_1.BorderSizePixel = 0
-		Size_1.Position = UDim2.new(1, 0,1, 0)
-		Size_1.Size = UDim2.new(0, 20,0, 20)
-		Size_1.Font = Enum.Font.SourceSans
-		Size_1.Text = ""
-		Size_1.TextSize = 14
-
-		local SizeFrame = Instance.new("Frame")
-		local ImageLabel_1 = Instance.new("ImageLabel")
-		local UICorner_1 = Instance.new("UICorner")
-
-		SizeFrame.Name = "SizeFrame"
-		SizeFrame.Parent = Background_1
-		SizeFrame.BackgroundColor3 = Color3.fromRGB(0,0,0)
-		SizeFrame.BackgroundTransparency = 1
-		SizeFrame.BorderColor3 = Color3.fromRGB(0,0,0)
-		SizeFrame.BorderSizePixel = 0
-		SizeFrame.Size = UDim2.new(1, 0,1, 0)
-
-		ImageLabel_1.Parent = SizeFrame
-		ImageLabel_1.AnchorPoint = Vector2.new(0.5, 0.5)
-		ImageLabel_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
-		ImageLabel_1.BackgroundTransparency = 1
-		ImageLabel_1.BorderColor3 = Color3.fromRGB(0,0,0)
-		ImageLabel_1.BorderSizePixel = 0
-		ImageLabel_1.Position = UDim2.new(0.5, 0,0.5, 0)
-		ImageLabel_1.Size = UDim2.new(0, 100,0, 100)
-		ImageLabel_1.Image = "rbxassetid://13857987062"
-		ImageLabel_1.ImageTransparency = 1
-
-		UICorner_1.Parent = SizeFrame
-		UICorner_1.CornerRadius = UDim.new(0,17)
-
-		Size_1.MouseButton1Down:Connect(function()
-			R = true
-		end)
-
-		local isZ = false
-		local originalSize, originalPosition
-
-		Minisize_1.MouseButton1Click:Connect(function()
-			if not isZ then
-				originalSize = Shadow_1.Size
-				originalPosition = Shadow_1.Position
-				tw({v = Shadow_1, t = 0.15, s = Enum.EasingStyle.Exponential, d = "Out", g = {
-					Size = UDim2.new(1, 0, 1, 0),
-					Position = UDim2.new(0, 0, 0, 0)
-				}}):Play()
-				Minisize_1.Image = "rbxassetid://13857981896"
-			else
-				Minisize_1.Image = "rbxassetid://13857987062"
-				tw({v = Shadow_1, t = 0.15, s = Enum.EasingStyle.Exponential, d = "Out", g = {
-					Size = originalSize,
-					Position = originalPosition
-				}}):Play()
-			end
-			isZ = not isZ
-		end)
 
 		if not HAA then
 			local AP, PAZ = Shadow_1.AbsolutePosition, Shadow_1.Parent.AbsoluteSize
@@ -4521,86 +4454,78 @@ function Library:CreateWindow(p)
 				}
 			})]]
 
-			Library:setTheme({
-				['Shadow'] = Color3.fromRGB(15, 15, 15),
-				['Background'] = Color3.fromRGB(20, 20, 20),
-				['Page'] = Color3.fromRGB(18, 18, 18),
-				['Main'] = Color3.fromRGB(0, 80, 252),
-				['Text & Icon'] = Color3.fromRGB(230, 230, 230),
-				['Function'] = {
-					['Toggle'] = {
-						['Background'] = Color3.fromRGB(25, 25, 25),
-						['True'] = {
-							['Toggle Background'] = Color3.fromRGB(40, 40, 40),
-							['Toggle Value'] = Color3.fromRGB(0, 80, 252),
-						},
-						['False'] = {
-							['Toggle Background'] = Color3.fromRGB(30, 30, 30),
-							['Toggle Value'] = Color3.fromRGB(40, 40, 40),
-						}
-					},
-					['Label'] = {
-						['Background'] = Color3.fromRGB(25, 25, 25),
-					},
-					['Dropdown'] = {
-						['Background'] = Color3.fromRGB(25, 25, 25),
-						['Value Background'] = Color3.fromRGB(20, 20, 20),
-						['Value Stroke'] = Color3.fromRGB(230, 230, 230),
-						['Dropdown Select'] = {
-							['Background'] = Color3.fromRGB(20, 20, 20),
-							['Search'] = Color3.fromRGB(30, 30, 30),
-							['Item Background'] = Color3.fromRGB(30, 30, 30),
-						}
-					},
-					['Slider'] = {
-						['Background'] = Color3.fromRGB(25, 25, 25),
-						['Value Background'] = Color3.fromRGB(20, 20, 20),
-						['Value Stroke'] = Color3.fromRGB(230, 230, 230),
-						['Slider Bar'] = Color3.fromRGB(40, 40, 40),
-						['Slider Bar Value'] = Color3.fromRGB(0, 80, 252),
-						['Circle Value'] = Color3.fromRGB(255, 255, 255)
-					},
-					['Code'] = {
-						['Background'] = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(25, 25, 25)), ColorSequenceKeypoint.new(1, Color3.fromRGB(25, 25, 25))},
-						['Background Code'] = Color3.fromRGB(35, 35, 35),
-						['Background Code Value'] = Color3.fromRGB(28, 28, 28),
-						['ScrollingFrame Code'] = Color3.fromRGB(150, 150, 150)
-					},
-					['Button'] = {
-						['Background'] = Color3.fromRGB(25, 25, 25),
-						['Click'] = Color3.fromRGB(230, 230, 230)
-					},
-					['Textbox'] = {
-						['Background'] = Color3.fromRGB(25, 25, 25),
-						['Value Background'] = Color3.fromRGB(20, 20, 20),
-						['Value Stroke'] = Color3.fromRGB(230, 230, 230),
-					},
-					['Keybind'] = {
-						['Background'] = Color3.fromRGB(25, 25, 25),
-						['Value Background'] = Color3.fromRGB(20, 20, 20),
-						['Value Stroke'] = Color3.fromRGB(230, 230, 230),
-						['True'] = {
-							['Toggle Background'] = Color3.fromRGB(40, 40, 40),
-							['Toggle Value'] = Color3.fromRGB(0, 80, 252),
-						},
-						['False'] = {
-							['Toggle Background'] = Color3.fromRGB(30, 30, 30),
-							['Toggle Value'] = Color3.fromRGB(40, 40, 40),
-						}
-					},
-					['Color Picker'] = {
-						['Background'] = Color3.fromRGB(25, 25, 25),
-						['Color Select'] = {
-							['Background'] = Color3.fromRGB(20, 20, 20),
-							['UIStroke'] = Color3.fromRGB(230, 230, 230),
+				Library:setTheme({
+        ['Shadow'] = Color3.fromRGB(15, 15, 15),
+		['Background'] = Color3.fromRGB(20, 20, 20),
+		['Page'] = Color3.fromRGB(18, 18, 18),
+		['Main'] = Color3.fromRGB(0, 80, 252),
+		['Text & Icon'] = Color3.fromRGB(230, 230, 230),
+		['Function'] = {
+			['Toggle'] = {
+				['Background'] = Color3.fromRGB(25, 25, 25),
+				['True'] = {
+					['Toggle Background'] = Color3.fromRGB(40, 40, 40),
+					['Toggle Value'] = Color3.fromRGB(0, 80, 252),
+				},
+				['False'] = {
+					['Toggle Background'] = Color3.fromRGB(30, 30, 30),
+					['Toggle Value'] = Color3.fromRGB(40, 40, 40),
+				}
+			},
+			['Label'] = { ['Background'] = Color3.fromRGB(25, 25, 25) },
+			['Dropdown'] = {
+				['Background'] = Color3.fromRGB(25, 25, 25),
+				['Value Background'] = Color3.fromRGB(20, 20, 20),
+				['Value Stroke'] = Color3.fromRGB(230, 230, 230),
+				['Dropdown Select'] = {
+					['Background'] = Color3.fromRGB(20, 20, 20),
+					['Search'] = Color3.fromRGB(30, 30, 30),
+					['Item Background'] = Color3.fromRGB(30, 30, 30),
+				}
+			},
+			['Slider'] = {
+				['Background'] = Color3.fromRGB(25, 25, 25),
+				['Value Background'] = Color3.fromRGB(20, 20, 20),
+				['Value Stroke'] = Color3.fromRGB(230, 230, 230),
+				['Slider Bar'] = Color3.fromRGB(40, 40, 40),
+				['Slider Bar Value'] = Color3.fromRGB(0, 80, 252),
+				['Circle Value'] = Color3.fromRGB(255, 255, 255)
+			},
+			['Button'] = {
+				['Background'] = Color3.fromRGB(25, 25, 25),
+				['Click'] = Color3.fromRGB(230, 230, 230)
+			},
+			['Textbox'] = {
+				['Background'] = Color3.fromRGB(25, 25, 25),
+				['Value Background'] = Color3.fromRGB(20, 20, 20),
+				['Value Stroke'] = Color3.fromRGB(230, 230, 230),
+			},
+			['Keybind'] = {
+				['Background'] = Color3.fromRGB(25, 25, 25),
+				['Value Background'] = Color3.fromRGB(20, 20, 20),
+				['Value Stroke'] = Color3.fromRGB(230, 230, 230),
+				['True'] = {
+					['Toggle Background'] = Color3.fromRGB(40, 40, 40),
+					['Toggle Value'] = Color3.fromRGB(0, 80, 252),
+				},
+				['False'] = {
+					['Toggle Background'] = Color3.fromRGB(30, 30, 30),
+					['Toggle Value'] = Color3.fromRGB(40, 40, 40),
+				}
+			},
+			['Color Picker'] = {
+				['Background'] = Color3.fromRGB(25, 25, 25),
+				['Color Select'] = {
+					['Background'] = Color3.fromRGB(20, 20, 20),
+					['UIStroke'] = Color3.fromRGB(230, 230, 230),
 						}
 					}
 				}
 			})
 		end
-		local ThemeDrop = addDropdownSelect(DropdownValue_1, DropdownValue_1, false, CallTheme, Theme, themes.index)
 
-		CallTheme("Dark");CallTheme("Dark");CallTheme("Dark");CallTheme("Dark");CallTheme("Dark");CallTheme("Dark");
+
+		CallTheme("Dark");
 
 		Close_1.MouseButton1Click:Connect(function()
 						ScreenGui:Destroy()
