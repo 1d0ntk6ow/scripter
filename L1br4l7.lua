@@ -1057,7 +1057,9 @@ function Library:CreateWindow(p)
 	local Frame_5 = Instance.new("Frame")
 	local Ct_1 = Instance.new("Frame")
 	local UIPadding_11 = Instance.new("UIPadding")
+	local Minisize_1 = Instance.new("ImageButton")
 	local UIListLayout_6 = Instance.new("UIListLayout")
+	local Close_1 = Instance.new("ImageButton")
 	local DropdownValue_1 = Instance.new("Frame")
 	local Td_1 = Instance.new("Frame")
 	local UIPadding_13 = Instance.new("UIPadding")
@@ -1094,6 +1096,19 @@ function Library:CreateWindow(p)
 	Ct_1.BorderColor3 = Color3.fromRGB(0,0,0)
 	Ct_1.BorderSizePixel = 0
 	Ct_1.Size = UDim2.new(1, 0,1, 0)
+
+	UIPadding_11.Parent = Ct_1
+	UIPadding_11.PaddingBottom = UDim.new(0,5)
+	UIPadding_11.PaddingLeft = UDim.new(0,10)
+	UIPadding_11.PaddingRight = UDim.new(0,10)
+	UIPadding_11.PaddingTop = UDim.new(0,5)
+
+	UIListLayout_6.Parent = Ct_1
+	UIListLayout_6.Padding = UDim.new(0,10)
+	UIListLayout_6.FillDirection = Enum.FillDirection.Horizontal
+	UIListLayout_6.HorizontalAlignment = Enum.HorizontalAlignment.Right
+	UIListLayout_6.SortOrder = Enum.SortOrder.LayoutOrder
+	UIListLayout_6.VerticalAlignment = Enum.VerticalAlignment.Center
 
 	Close_1.Name = "Close"
 	Close_1.Parent = Ct_1
@@ -4322,6 +4337,8 @@ function Library:CreateWindow(p)
 			end
 		end
 
+		ChSize_1.MouseButton1Click:Connect(closeui)
+
 		U.InputBegan:Connect(function(i)
 			if i.KeyCode == Keybind then
 				local focusedTextBox = U:GetFocusedTextBox()
@@ -4419,7 +4436,7 @@ function Library:CreateWindow(p)
 		['Text & Icon'] = Color3.fromRGB(230, 230, 230),
 		['Function'] = {
 			['Toggle'] = {
-				['Background'] = Color3.fromRGB(56, 56, 56),
+				['Background'] = Color3.fromRGB(25, 25, 25),
 				['True'] = {
 					['Toggle Background'] = Color3.fromRGB(40, 40, 40),
 					['Toggle Value'] = Color3.fromRGB(0, 80, 252),
