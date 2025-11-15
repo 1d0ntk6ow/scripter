@@ -978,8 +978,8 @@ function Library:CreateWindow(p)
 	local Title = p.Title or 'null'
 	local Desc = p.Author or ''
 	local Icon = p.Icon or 'door-open'
-	local Theme = p.Theme or 'Dark'
-	local Keybind = p.Keybind or Enum.KeyCode.LeftControl
+	local Theme = 'Dark'
+	local Keybind = Enum.KeyCode.LeftControl
 	local Size = p.Size or UDim2.new(0, 530,0, 400)
 
 	local R, HAA = false, false
@@ -1018,7 +1018,7 @@ function Library:CreateWindow(p)
 	Background_1.Name = "Background"
 	Background_1.Parent = Shadow_1
 	Background_1.AnchorPoint = Vector2.new(0.5, 0.5)
-	Background_1.BackgroundColor3 = Color3.fromRGB(29, 28, 38)
+	Background_1.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 	Background_1.BorderColor3 = Color3.fromRGB(0,0,0)
 	Background_1.BorderSizePixel = 0
 	Background_1.Position = UDim2.new(0.5, 0,0.5, 0)
@@ -1063,9 +1063,7 @@ function Library:CreateWindow(p)
 	local Frame_5 = Instance.new("Frame")
 	local Ct_1 = Instance.new("Frame")
 	local UIPadding_11 = Instance.new("UIPadding")
-	local Minisize_1 = Instance.new("ImageButton")
 	local UIListLayout_6 = Instance.new("UIListLayout")
-	local DropdownValue_1 = Instance.new("Frame")
 	local Td_1 = Instance.new("Frame")
 	local UIPadding_13 = Instance.new("UIPadding")
 	local UIListLayout_7 = Instance.new("UIListLayout")
@@ -1074,7 +1072,6 @@ function Library:CreateWindow(p)
 	local Desc_1 = Instance.new("TextLabel")
 	local UIListLayout_8 = Instance.new("UIListLayout")
 	local Title_2 = Instance.new("TextLabel")
-	local ChSize_1 = Instance.new("ImageButton")
 
 	Topbar_1.Name = "Topbar"
 	Topbar_1.Parent = Background_1
@@ -1108,20 +1105,6 @@ function Library:CreateWindow(p)
 	UIPadding_11.PaddingRight = UDim.new(0,10)
 	UIPadding_11.PaddingTop = UDim.new(0,5)
 
-	Minisize_1.Name = "Minisize"
-	Minisize_1.Parent = Ct_1
-	Minisize_1.Active = true
-	Minisize_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
-	Minisize_1.BackgroundTransparency = 1
-	Minisize_1.BorderColor3 = Color3.fromRGB(0,0,0)
-	Minisize_1.BorderSizePixel = 0
-	Minisize_1.LayoutOrder = 2
-	Minisize_1.Size = UDim2.new(0, 16,0, 16)
-	Minisize_1.Image = "rbxassetid://13857987062"
-	Minisize_1.ImageTransparency = 0.5
-
-	addToTheme('Text & Icon', Minisize_1)
-
 	UIListLayout_6.Parent = Ct_1
 	UIListLayout_6.Padding = UDim.new(0,10)
 	UIListLayout_6.FillDirection = Enum.FillDirection.Horizontal
@@ -1129,28 +1112,6 @@ function Library:CreateWindow(p)
 	UIListLayout_6.SortOrder = Enum.SortOrder.LayoutOrder
 	UIListLayout_6.VerticalAlignment = Enum.VerticalAlignment.Center
 
-
-	ChSize_1.Name = "Size"
-	ChSize_1.Parent = Ct_1
-	ChSize_1.Active = true
-	ChSize_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
-	ChSize_1.BackgroundTransparency = 1
-	ChSize_1.BorderColor3 = Color3.fromRGB(0,0,0)
-	ChSize_1.BorderSizePixel = 0
-	ChSize_1.LayoutOrder = 1
-	ChSize_1.Size = UDim2.new(0, 16,0, 16)
-	ChSize_1.Image = "rbxassetid://15082210525"
-	ChSize_1.ImageTransparency = 0.5
-
-	DropdownValue_1.Name = "DropdownValue"
-	DropdownValue_1.Parent = Ct_1
-	DropdownValue_1.AnchorPoint = Vector2.new(1, 0.5)
-	DropdownValue_1.BackgroundColor3 = Color3.fromRGB(24,24,31)
-	DropdownValue_1.BorderColor3 = Color3.fromRGB(0,0,0)
-	DropdownValue_1.BorderSizePixel = 0
-	DropdownValue_1.Position = UDim2.new(1, 0,0.5, 0)
-	DropdownValue_1.Size = UDim2.new(0, 120,0, 20)
-	DropdownValue_1.Transparency = 1
 
 	Td_1.Name = "Td"
 	Td_1.Parent = Topbar_1
@@ -4328,24 +4289,6 @@ function Library:CreateWindow(p)
 		local isZ = false
 		local originalSize, originalPosition
 
-		Minisize_1.MouseButton1Click:Connect(function()
-			if not isZ then
-				originalSize = Shadow_1.Size
-				originalPosition = Shadow_1.Position
-				tw({v = Shadow_1, t = 0.15, s = Enum.EasingStyle.Exponential, d = "Out", g = {
-					Size = UDim2.new(1, 0, 1, 0),
-					Position = UDim2.new(0, 0, 0, 0)
-				}}):Play()
-				Minisize_1.Image = "rbxassetid://13857981896"
-			else
-				Minisize_1.Image = "rbxassetid://13857987062"
-				tw({v = Shadow_1, t = 0.15, s = Enum.EasingStyle.Exponential, d = "Out", g = {
-					Size = originalSize,
-					Position = originalPosition
-				}}):Play()
-			end
-			isZ = not isZ
-		end)
 
 		if not HAA then
 			local AP, PAZ = Shadow_1.AbsolutePosition, Shadow_1.Parent.AbsoluteSize
@@ -4425,7 +4368,6 @@ function Library:CreateWindow(p)
 			end
 		end
 
-		ChSize_1.MouseButton1Click:Connect(closeui)
 
 		U.InputBegan:Connect(function(i)
 			if i.KeyCode == Keybind then
@@ -4593,7 +4535,7 @@ function Library:CreateWindow(p)
 				}
 			})
 		end
-		local ThemeDrop = addDropdownSelect(DropdownValue_1, DropdownValue_1, false, CallTheme, Theme, themes.index)
+
 
 		CallTheme("Dark");CallTheme("Dark");CallTheme("Dark");CallTheme("Dark");CallTheme("Dark");CallTheme("Dark");
 
