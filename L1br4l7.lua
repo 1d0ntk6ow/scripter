@@ -493,7 +493,7 @@ do
 		UIPadding_1.PaddingRight = UDim.new(0,13)
 
 		DropdownValue.Parent = F
-		DropdownValue.BackgroundColor3 = Color3.fromRGB(24,24,31)
+		DropdownValue.BackgroundColor3 = Color3.fromRGB(20,20,20)
 		DropdownValue.BorderColor3 = Color3.fromRGB(0,0,0)
 		DropdownValue.BorderSizePixel = 0
 		DropdownValue.Size = UDim2.new(0, 100,0, 20)
@@ -562,7 +562,7 @@ do
 		local UIPadding_4 = Instance.new("UIPadding")
 
 		DropdownSelect.Parent = ScreenGui
-		DropdownSelect.BackgroundColor3 = Color3.fromRGB(24,24,31)
+		DropdownSelect.BackgroundColor3 = Color3.fromRGB(20,20,20)
 		DropdownSelect.BorderColor3 = Color3.fromRGB(0,0,0)
 		DropdownSelect.BorderSizePixel = 0
 		DropdownSelect.Size = UDim2.new(0, 150,0, 0)
@@ -979,7 +979,7 @@ function Library:CreateWindow(p)
 	local Desc = p.Author or ''
 	local Icon = p.Icon or 'door-open'
 	local Theme = 'Dark'
-	local Keybind = Enum.KeyCode.LeftControl
+	local Keybind = p.Keybind or Enum.KeyCode.LeftControl
 	local Size = p.Size or UDim2.new(0, 530,0, 400)
 
 	local R, HAA = false, false
@@ -1083,7 +1083,7 @@ function Library:CreateWindow(p)
 
 	Frame_5.Parent = Topbar_1
 	Frame_5.AnchorPoint = Vector2.new(0, 1)
-	Frame_5.BackgroundColor3 = Color3.fromRGB(24,24,31)
+	Frame_5.BackgroundColor3 = Color3.fromRGB(20,20,20)
 	Frame_5.BorderColor3 = Color3.fromRGB(0,0,0)
 	Frame_5.BorderSizePixel = 0
 	Frame_5.Position = UDim2.new(0, 0,1, 0)
@@ -1273,7 +1273,7 @@ function Library:CreateWindow(p)
 	UICorner_10.CornerRadius = UDim.new(1,0)
 
 	UIStroke_3.Parent = Select_1
-	UIStroke_3.Color = Color3.fromRGB(24,24,31)
+	UIStroke_3.Color = Color3.fromRGB(20,20,20)
 	UIStroke_3.Thickness = 1
 	UIStroke_3.Transparency = 0.9
 
@@ -1391,7 +1391,7 @@ function Library:CreateWindow(p)
 		UIPadding_14.PaddingLeft = UDim.new(0,8)
 
 		UIStroke_2.Parent = Title_3
-		UIStroke_2.Color = Color3.fromRGB(24,24,31)
+		UIStroke_2.Color = Color3.fromRGB(20,20,20)
 		UIStroke_2.Thickness = 1
 		UIStroke_2.Transparency = 0.95
 
@@ -1404,7 +1404,7 @@ function Library:CreateWindow(p)
 		InPage_1.Name = "InPage"
 		InPage_1.Parent = Page_1
 		InPage_1.AnchorPoint = Vector2.new(0.5 ,0.5)
-		InPage_1.BackgroundColor3 = Color3.fromRGB(24,24,31)
+		InPage_1.BackgroundColor3 = Color3.fromRGB(20,20,20)
 		InPage_1.BorderColor3 = Color3.fromRGB(0,0,0)
 		InPage_1.BorderSizePixel = 0
 		InPage_1.Size = UDim2.new(1, 0,1, 0)
@@ -1889,7 +1889,7 @@ function Library:CreateWindow(p)
 
 			FrameValueTextBox.Parent = F
 			FrameValueTextBox.Active = true
-			FrameValueTextBox.BackgroundColor3 = Color3.fromRGB(24,24,31)
+			FrameValueTextBox.BackgroundColor3 = Color3.fromRGB(20,20,20)
 			FrameValueTextBox.BorderColor3 = Color3.fromRGB(0,0,0)
 			FrameValueTextBox.BorderSizePixel = 0
 			FrameValueTextBox.Size = UDim2.new(0, 50,0, 20)
@@ -2744,7 +2744,7 @@ function Library:CreateWindow(p)
 
 			KeybindValue_1.Name = "KeybindValue"
 			KeybindValue_1.Parent = F
-			KeybindValue_1.BackgroundColor3 = Color3.fromRGB(24,24,31)
+			KeybindValue_1.BackgroundColor3 = Color3.fromRGB(20,20,20)
 			KeybindValue_1.BorderColor3 = Color3.fromRGB(0,0,0)
 			KeybindValue_1.BorderSizePixel = 0
 			KeybindValue_1.Size = UDim2.new(0, 30,0, 20)
@@ -3715,7 +3715,7 @@ function Library:CreateWindow(p)
 			UIPadding_1.PaddingRight = UDim.new(0,13)
 
 			Frame_1.Parent = F
-			Frame_1.BackgroundColor3 = Color3.fromRGB(24,24,31)
+			Frame_1.BackgroundColor3 = Color3.fromRGB(20,20,20)
 			Frame_1.BorderColor3 = Color3.fromRGB(0,0,0)
 			Frame_1.BorderSizePixel = 0
 			Frame_1.Size = UDim2.new(0, 130,0, 25)
@@ -4572,7 +4572,7 @@ function Library:CreateWindow(p)
 			CloseUIShadow.Position = UDim2.new(0, 0,0.200000003, 0)
 			CloseUIShadow.Size = UDim2.new(0, 70,0, 40)
 			CloseUIShadow.Image = "rbxassetid://1316045217"
-			CloseUIShadow.ImageColor3 = Color3.fromRGB(24,24,31)
+			CloseUIShadow.ImageColor3 = Color3.fromRGB(20,20,20)
 			CloseUIShadow.ImageTransparency = 0.5
 			CloseUIShadow.ScaleType = Enum.ScaleType.Slice
 			CloseUIShadow.SliceCenter = Rect.new(10, 10, 118, 118)
